@@ -1,0 +1,70 @@
+.container {
+  padding: 20px;
+  padding-bottom: 60px;
+}
+
+.scroll-container {
+  flex: 1; /* 让滚动视图占据剩余空间 */
+  overflow-y: auto; /* 确保有垂直滚动条 */
+  -webkit-overflow-scrolling: touch; /* 在iOS上实现更好的滚动效果 */
+}
+
+.class-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.class-name, .class-address, .class-time {
+  padding: 8px;
+  text-align: left;
+  flex: 1; /* 让 name, address, time 占据剩余空间 */
+}
+
+.class-name {
+  flex: 2; /* 增加 name 的宽度 */
+  min-width: 0; /* 确保内容不会溢出 */
+  word-break: break-all; /* 防止长文本溢出 */
+}
+
+.class-address, .class-time {
+  flex: 1; /* 默认宽度 */
+}
+
+.class-button {
+  flex: 0 0 100px; /* 固定按钮宽度为 80px */
+  margin-left: auto; /* 使按钮右对齐 */
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center; /* 确保文本居中 */
+}
+
+/* 选中状态的样式 */
+.class-button.selected {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* 固定底部容器 */
+.fixed-bottom-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255); /* 根据需要调整背景色 */
+  padding: 10px 0; /* 可以根据实际需求调整内边距 */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1); /* 添加阴影效果，可选 */
+  z-index: 1000; /* 确保容器在其他内容之上 */
+}
+
+/* 按钮本身的样式 */
+.confirm-button {
+  display: block;
+  margin: 0 auto;
+  width: 80%; /* 或者任何你希望的宽度 */
+  /* 其他按钮样式... */
+}

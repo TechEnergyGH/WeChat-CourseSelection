@@ -1,0 +1,18 @@
+<!--pages/select/select.wxml-->
+<veiw class="container">
+  <scroll-view class="scroll-container" scroll-y="true">
+    <block wx:for="{{classList}}" wx:key="id">
+      <view class="class-item">
+        <view class="class-name">{{item.name}}</view>
+        <view class="class-address">{{item.address}}</view>
+        <view class="class-time">{{item.time}}</view>
+        <button class="class-button {{item.selected ? 'selected' : ''}}" data-index="{{index}}" bindtap="onClassSelect">
+          {{item.selected ? '已选择' : '选择'}}
+        </button>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="fixed-bottom-container">
+    <button class="confirm-button" bind:tap="onConfirmClass">确定</button>
+  </view>
+</veiw>

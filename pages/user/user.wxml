@@ -1,0 +1,12 @@
+<!--pages/user/user.wxml-->
+<scroll-view class="scrolleara" scroll-y type="list">
+  <view class="userinfo">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view class="userinfo-nickname">
+      <text>{{userInfo.nickName}}</text>
+    </view>
+    <button class="button-signout" bind:tap="onButtonSignout">退出登录</button>
+  </view>
+</scroll-view>
+
+

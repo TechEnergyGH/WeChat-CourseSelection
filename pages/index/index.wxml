@@ -1,0 +1,23 @@
+<view class="timetable">
+  <!-- 表头 -->
+  <view class="header">
+    <view class="cell header-cell">时间/星期</view>
+    <view class="cell header-cell" wx:for="{{days}}" wx:key="day">{{item}}</view>
+  </view>
+
+  <!-- 课程行 -->
+  <block wx:for="{{times}}" wx:for-index="timeIndex" wx:key="timeIndex">
+    <view class="row">
+      <view class="cell time-cell">{{timeIndex + 1}}节</view>
+      <block wx:for="{{timetable[timeIndex]}}" wx:for-index="dayIndex" wx:key="dayIndex">
+        <view class="cell" wx:if="{{item.hasCourse}}">
+          {{item.courseName}}
+        </view>
+        <view class="cell" wx:else></view>
+      </block>
+    </view>
+  </block>
+  <view class="fixed-bottom-container">
+    <button class="confirm-button" bind:tap="onOutClass">导出</button>
+  </view>
+</view>
