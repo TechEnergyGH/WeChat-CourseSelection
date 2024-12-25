@@ -16,6 +16,8 @@
 
 ## 3.启动Node.js服务
 
+在项目目录运行`npm install`
+
 运行`./mysql/server.bat`
 
 ## 4.运行项目
