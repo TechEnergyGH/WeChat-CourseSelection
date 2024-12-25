@@ -77,7 +77,7 @@ Page({
   },
 
   onOutClass: function () {
-    const XLSX = require('../../utils/xlsx.full.min.js')
+    const XLSX = require('xlsx')
     console.log('导出');
     var data = [['', ...this.data.days]];
     this.data.timetable.forEach((item, index) => {
