@@ -142,6 +142,23 @@ Page({
             }
           })
          });
+
+         await new Promise((reslove,reject)=>{
+            wx.request({
+              url: 'http://127.0.0.1:3000',
+              method: "get",
+              data: {
+                query: 'SELECT * FROM class;'
+            },
+            success: (res)=>{
+              wx.setStorageSync('classList', res.data)
+              reslove(res)
+            },
+            fail: (err)=>{
+              reject(err)
+            }
+            })
+         })
         } catch (err) {
           console.error(err);
         }
