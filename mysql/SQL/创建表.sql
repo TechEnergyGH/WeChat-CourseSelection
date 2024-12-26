@@ -9,7 +9,8 @@ CREATE TABLE class(
   `name` VARCHAR(50) NOT NULL,
   address VARCHAR(100) NOT NULL,
   `time` INT NOT NULL,
-  teacher VARCHAR(10) NOT NULL
+  teacher VARCHAR(10) NOT NULL,
+  credits INT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE select_class(
