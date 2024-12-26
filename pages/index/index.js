@@ -4,7 +4,7 @@ Page({
   data: {
     days: ['一', '二', '三', '四', '五'], // 星期几
     times: [0, 1, 2, 3, 4, 5],
-    classList: [{ id: 1, name: "离散数学", days: "一", time: 1 }],
+    classList: [{ id: 1, name: "离散数学", days: "一", time: 1 ,credits: 3}],
     timetable: []
   },
 

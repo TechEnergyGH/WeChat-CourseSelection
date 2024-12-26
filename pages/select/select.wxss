@@ -68,3 +68,16 @@
   width: 80%; /* 或者任何你希望的宽度 */
   /* 其他按钮样式... */
 }
+
+.class-description {
+  display: flex;
+  padding: 8px;
+  position: relative;
+  top: -15px;
+}
+.class-teacher {
+  flex: 1;
+}
+.class-credits {
+  flex: 1;
+}

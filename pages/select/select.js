@@ -97,15 +97,19 @@ Page({
   onConfirmClass() {
     console.log('课程选择确认');
     var classList = this.data.classList.filter(item => item.selected);
-    const repeat = function () {
+    const {repeat, score} = function () {
       var setList = new Set()
+      var score = 0
+      var repeat = true
       for (let item of classList) {
         if (setList.has(item.time)) {
-          return true;
+          return {repeat, score};
         }
         setList.add(item.time)
+        score += item.credits
       }
-      return false;
+      repeat = false
+      return {repeat, score}
     }();
     if (repeat) {
       wx.showToast({
@@ -113,6 +117,12 @@ Page({
         duration: 1000,
         icon: 'error'
       });
+    }else if(score < 20){
+      wx.showToast({
+        title: '学分不足20',
+        duration: 1000,
+        icon: 'error'
+      })
     } else {
       var newClassList = []
       var delClassList = []
