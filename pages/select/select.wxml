@@ -2,6 +2,7 @@
 <veiw class="container">
   <scroll-view class="scroll-container" scroll-y="true">
     <block wx:for="{{classList}}" wx:key="id">
+    <view class="class-all">
       <view class="class-item">
         <view class="class-name">{{item.name}}</view>
         <view class="class-address">{{item.address}}</view>
@@ -13,6 +14,7 @@
       <view class="class-description">
         <view class="class-teacher">老师: {{item.teacher}}</view>
         <view class="class-credits">学分: {{item.credits}}</view>
+      </view>
       </view>
     </block>
   </scroll-view>

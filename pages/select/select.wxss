@@ -33,7 +33,9 @@
 
 .class-button {
   flex: 0 0 100px; /* 固定按钮宽度为 80px */
-  margin-left: auto; /* 使按钮右对齐 */
+  position: relative;
+  right: 3px;
+  top: 20px;
   border: none;
   border-radius: 4px;
   background-color: #007bff;
@@ -80,4 +82,9 @@
 }
 .class-credits {
   flex: 1;
+}
+
+.class-all {
+  border: 2px solid black;
+  margin-top: 10px;
 }
